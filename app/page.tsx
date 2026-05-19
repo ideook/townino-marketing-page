@@ -1,54 +1,11 @@
 import {
-  AccessTable,
-  Callout,
-  FeatureShowcase,
   Footer,
-  IconCard,
-  ResourceCard,
-  Section,
-  TokenGrid,
   TopBar,
-  TrustQuote,
 } from "@/components/daybreak-system";
-
-const cards = [
-  {
-    icon: "scan",
-    title: "Focus the page",
-    text: "Keep the first screen direct, then let proof, product detail, and conversion sections carry the page.",
-  },
-  {
-    icon: "shield",
-    title: "Ship common blocks",
-    text: "Use one token set for typography, surfaces, borders, buttons, tables, and repeated marketing sections.",
-  },
-  {
-    icon: "check",
-    title: "Verify in browser",
-    text: "Treat the design system as a rendered product, with screenshots and layout checks before reuse.",
-  },
-] as const;
-
-const resources = [
-  {
-    tone: "blue",
-    title: "Product Narrative",
-    label: "Messaging",
-    date: "May 18, 2026",
-  },
-  {
-    tone: "orange",
-    title: "Launch Checklist",
-    label: "Operations",
-    date: "May 18, 2026",
-  },
-  {
-    tone: "green",
-    title: "Customer Story",
-    label: "Growth",
-    date: "May 18, 2026",
-  },
-] as const;
+import { TowninoFinalCta } from "@/components/townino-final-cta";
+import { TowninoIndustryExamples } from "@/components/townino-industry-examples";
+import { TowninoPositioningSection } from "@/components/townino-positioning-section";
+import { TowninoUseCaseShowcase } from "@/components/townino-use-case-showcase";
 
 const openaiHeroTitle = (
   <>
@@ -157,49 +114,23 @@ export default function Home() {
             <div className="philosophy-copy">
               <p>가게는 매일 바뀝니다.</p>
               <p>
-                새로운 메뉴가 생기고,
+                새로운 메뉴, 가격, 고객 질문, 리뷰, 공지도 계속 달라집니다.
                 <br />
-                가격이 조정되고,
-                <br />
-                고객이 자주 묻는 질문이 달라지고,
-                <br />
-                리뷰에서 칭찬과 불만이 쌓이고,
-                <br />
-                계절마다 필요한 공지도 달라집니다.
+                하지만 대부분의 매장 소개는 한 번 적고 멈춰 있습니다.
+              </p>
+              <p className="philosophy-pivot">
+                Townino는 이 변화를 ‘매장 설명서’로 정리합니다.
               </p>
               <p>
-                그런데 대부분의 매장 소개는 한 번 적고 멈춰 있습니다.
-                Townino는 매장의 변화를 계속 정리해 고객이 이해할 수 있는
-                설명과 콘텐츠로 바꿉니다.
+                매장 설명서는 가게의 장점, 메뉴의 이유, 가격 기준,
+                고객 응대 방식,
+                <br />
+                자주 받는 질문과 리뷰 반응을 모은 우리 매장의 마케팅
+                원본입니다.
               </p>
-            </div>
-
-            <div className="philosophy-keyline">
               <p>
-                마케팅은 일상입니다.
-                <br />
-                하지만 사장님이 매일 혼자 만들 필요는 없습니다.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section manual-section" aria-labelledby="manual-title">
-          <div className="container manual-layout">
-            <h2 id="manual-title">
-              모든 마케팅은 ‘매장 설명서’에서 시작합니다.
-            </h2>
-
-            <div className="manual-copy">
-              <p>매장 설명서는 단순한 소개 페이지가 아닙니다.</p>
-              <p>
-                사장님의 머릿속에만 있던
-                <br />
-                가게의 장점, 메뉴의 이유, 가격 기준, 고객 응대 방식,
-                <br />
-                자주 받는 질문, 리뷰에서 나온 반응을 정리한
-                <br />
-                우리 매장의 마케팅 원본입니다.
+                한 번 정리한 설명서는 검색 노출, SNS 콘텐츠, 공지, 리뷰 답변,
+                상담 문구로 계속 활용됩니다.
               </p>
             </div>
 
@@ -210,42 +141,16 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
-            <div className="manual-keyline">
-              <p>
-                한 번 정리한 설명서는
-                <br />
-                검색 노출, SNS 콘텐츠, 공지, 리뷰 답변, 상담 문구로 계속 활용됩니다.
-              </p>
-            </div>
           </div>
         </section>
 
-        <Section title="Core style tokens">
-          <TokenGrid />
-        </Section>
+        <TowninoUseCaseShowcase />
 
-        <Section title="How to use these blocks">
-          <div className="icon-grid">
-            {cards.map((card) => (
-              <IconCard key={card.title} {...card} />
-            ))}
-          </div>
-        </Section>
+        <TowninoIndustryExamples />
 
-        <FeatureShowcase />
-        <AccessTable />
-        <TrustQuote />
+        <TowninoPositioningSection />
 
-        <Section title="Explore reusable resource cards" className="resource-section">
-          <div className="resource-grid">
-            {resources.map((resource) => (
-              <ResourceCard key={resource.title} {...resource} />
-            ))}
-          </div>
-        </Section>
-
-        <Callout />
+        <TowninoFinalCta />
       </main>
       <Footer />
     </>
