@@ -152,8 +152,7 @@ blockquote {
 }
 
 .problem-quote-card-section {
-  background: var(--color-band);
-  margin-top: 72px;
+  background: var(--color-page);
 }
 
 .problem-quote-card-layout,
@@ -202,7 +201,7 @@ blockquote {
   gap: 14px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 68px auto 0;
-  max-width: 1080px;
+  max-width: var(--container-wide);
 }
 
 .problem-quote-card {
@@ -220,6 +219,8 @@ blockquote {
   font-size: 18px;
   font-weight: 520;
   line-height: 1.42;
+  text-align: center;
+  width: 100%;
   word-break: keep-all;
 }
 
@@ -233,7 +234,6 @@ blockquote {
 
 .philosophy-section {
   background: var(--color-page);
-  padding-bottom: 56px;
 }
 
 .philosophy-copy {
@@ -580,10 +580,6 @@ blockquote {
 }
 
 .industry-centered-log-section {
-  padding-top: 32px;
-}
-
-.industry-compact-center-section {
   padding-top: 32px;
 }
 
@@ -1061,7 +1057,6 @@ blockquote {
 
 .positioning-section {
   background: var(--color-page);
-  padding-top: 48px;
 }
 
 .container.positioning-layout > h2 {
@@ -1745,10 +1740,6 @@ blockquote {
     padding-right: 18px;
   }
 
-  .philosophy-section {
-    padding-bottom: 40px;
-  }
-
   .intro-section {
     padding-top: 54px;
   }
@@ -1850,20 +1841,12 @@ blockquote {
     padding-top: 24px;
   }
 
-  .industry-compact-center-section {
-    padding-top: 24px;
-  }
-
   .industry-before-after-section {
     padding-top: 24px;
   }
 
   .industry-channel-section {
     padding-top: 24px;
-  }
-
-  .positioning-section {
-    padding-top: 36px;
   }
 
   .industry-log-list,
