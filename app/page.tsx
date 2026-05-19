@@ -50,14 +50,6 @@ const resources = [
   },
 ] as const;
 
-const heroTitle = (
-  <>
-    사장님이 매일 하는 일을,
-    <br />
-    고객이 이해하는 마케팅으로.
-  </>
-);
-
 const openaiHeroTitle = (
   <>
     사장님이 매일 하는 일을,
@@ -68,27 +60,6 @@ const openaiHeroTitle = (
   </>
 );
 
-const heroDescription = (
-  <>
-    Townino는 매장의 장점, 메뉴, 가격, 공지, 리뷰, 운영 이야기를
-    <br />
-    ‘매장 설명서’로 정리하고,
-    <br />
-    검색과 SNS에 쓸 수 있는 콘텐츠로 바꿔주는
-    <br />
-    소상공인 구독형 마케팅 코치입니다.
-  </>
-);
-
-const problemItems = [
-  "사진은 있는데 설명이 없다",
-  "메뉴는 있는데 매력이 전달되지 않는다",
-  "리뷰는 쌓이는데 개선 포인트로 연결되지 않는다",
-  "공지와 이벤트는 매번 새로 쓰기 어렵다",
-  "네이버, 구글, 카카오, 인스타의 정보가 따로 논다",
-  "컨설팅은 한 번 받고 끝난다",
-] as const;
-
 const problemQuotes = [
   "사진은 찍어놨는데, 뭐라고 설명해야 할지 모르겠어요.",
   "메뉴는 많은데, 왜 이걸 먹어야 하는지 말로 잘 못 쓰겠어요.",
@@ -98,27 +69,25 @@ const problemQuotes = [
   "컨설팅은 받아봤는데, 시간이 지나면 다시 막혀요.",
 ] as const;
 
+const manualItems = [
+  "매장 소개",
+  "대표 메뉴와 서비스 설명",
+  "가격과 구성의 이유",
+  "고객이 자주 묻는 질문",
+  "사장님의 운영 철학",
+  "리뷰에서 발견한 장점과 불편",
+  "공지와 이벤트 템플릿",
+  "네이버·구글·카카오·인스타용 소개 문구",
+] as const;
+
 export default function Home() {
   return (
     <>
       <TopBar />
       <main>
-        <section className="hero-version hero-current">
-          <div className="hero-canvas">
-            <p className="hero-version-label">현재 버전</p>
-            <div className="hero-current-copy">
-              <h1>{heroTitle}</h1>
-              <div className="article-copy">
-                <p>{heroDescription}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="hero-version hero-openai">
           <div className="hero-openai-frame">
             <div className="hero-openai-copy">
-              <p className="hero-version-label">OpenAI 스타일 버전</p>
               <p className="openai-eyebrow">Townino for Local Business</p>
               <h1>{openaiHeroTitle}</h1>
               <p className="openai-description">
@@ -141,127 +110,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section problem-section" aria-labelledby="problem-title">
-          <div className="container problem-layout">
-            <div className="problem-copy">
-              <p className="eyebrow">Section 2. 문제 제기</p>
-              <h2 id="problem-title">
-                마케팅 서비스는 많지만,
-                <br />
-                사장님은 여전히 뭘 올려야 할지 모릅니다.
-              </h2>
-              <div className="problem-body">
-                <p>
-                  해시태그 추천, 자동 발행, 노출 최적화.
-                  <br />
-                  좋은 기능은 많습니다.
-                </p>
-                <p>하지만 많은 소상공인은 그 이전 단계에서 막힙니다.</p>
-                <p>
-                  오늘 어떤 이야기를 올려야 할지,
-                  <br />
-                  메뉴를 어떻게 설명해야 할지,
-                  <br />
-                  우리 가게의 장점을 어떤 말로 써야 할지,
-                  <br />
-                  네이버와 인스타에는 각각 뭐라고 써야 할지 모릅니다.
-                </p>
-              </div>
-            </div>
-
-            <div className="problem-list" aria-label="소상공인이 겪는 마케팅 문제">
-              {problemItems.map((item, index) => (
-                <article className="problem-item" key={item}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{item}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="section problem-alt-section"
-          aria-labelledby="problem-alt-title"
-        >
-          <div className="container">
-            <div className="problem-alt-intro">
-              <div className="problem-alt-heading">
-                <p className="eyebrow">비교 버전</p>
-                <h2 id="problem-alt-title">
-                  마케팅 서비스는 많지만,
-                  <br />
-                  사장님은 여전히 뭘 올려야 할지 모릅니다.
-                </h2>
-              </div>
-
-              <div className="problem-alt-copy">
-                <p>
-                  해시태그 추천, 자동 발행, 노출 최적화.
-                  <br />
-                  좋은 기능은 많습니다.
-                </p>
-                <p>하지만 많은 소상공인은 그 이전 단계에서 막힙니다.</p>
-                <p>
-                  오늘 어떤 이야기를 올려야 할지, 메뉴를 어떻게 설명해야 할지,
-                  우리 가게의 장점을 어떤 말로 써야 할지, 네이버와 인스타에는
-                  각각 뭐라고 써야 할지 모릅니다.
-                </p>
-              </div>
-            </div>
-
-            <div className="problem-alt-rows" aria-label="소상공인이 겪는 마케팅 문제">
-              {problemItems.map((item, index) => (
-                <article className="problem-alt-row" key={item}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <p>{item}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section
-          className="section problem-quote-section"
-          aria-labelledby="problem-quote-title"
-        >
-          <div className="container problem-quote-layout">
-            <div className="problem-quote-heading">
-              <p className="eyebrow">인터뷰 톤 버전</p>
-              <h2 id="problem-quote-title">
-                사장님들이 실제로는
-                <br />
-                이렇게 막힙니다.
-              </h2>
-              <p>
-                기능의 문제가 아니라, 매장 이야기를 어떤 말로 바꿔야 하는지
-                매번 혼자 결정해야 하는 문제입니다.
-              </p>
-            </div>
-
-            <div className="problem-quote-list" aria-label="인터뷰 톤 문제 인용문">
-              {problemQuotes.map((quote, index) => (
-                <figure className="problem-quote" key={quote}>
-                  <blockquote>{quote}</blockquote>
-                  <figcaption>{String(index + 1).padStart(2, "0")}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section
           className="section problem-quote-card-section"
           aria-labelledby="problem-quote-card-title"
         >
           <div className="container problem-quote-card-layout">
-            <div className="problem-quote-card-copy">
-              <p className="eyebrow">인용 카드 버전</p>
-              <h2 id="problem-quote-card-title">
-                마케팅 서비스는 많지만,
-                <br />
-                사장님은 여전히 뭘 올려야 할지 모릅니다.
-              </h2>
+              <div className="problem-quote-card-copy">
+                <h2 id="problem-quote-card-title">
+                  마케팅 서비스는 많지만, 사장님은 여전히 뭘 올려야 할지 모릅니다.
+                </h2>
               <div className="problem-quote-card-body">
                 <p>
                   해시태그 추천, 자동 발행, 노출 최적화.
@@ -293,11 +150,8 @@ export default function Home() {
 
         <section className="section philosophy-section" aria-labelledby="philosophy-title">
           <div className="container philosophy-layout">
-            <p className="eyebrow">Section 3. Townino의 관점</p>
             <h2 id="philosophy-title">
-              마케팅은 한 번 만드는 것이 아니라,
-              <br />
-              계속 설명하는 일입니다.
+              마케팅은 한 번 만드는 것이 아니라, 계속 설명하는 일입니다.
             </h2>
 
             <div className="philosophy-copy">
@@ -325,6 +179,43 @@ export default function Home() {
                 마케팅은 일상입니다.
                 <br />
                 하지만 사장님이 매일 혼자 만들 필요는 없습니다.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section manual-section" aria-labelledby="manual-title">
+          <div className="container manual-layout">
+            <h2 id="manual-title">
+              모든 마케팅은 ‘매장 설명서’에서 시작합니다.
+            </h2>
+
+            <div className="manual-copy">
+              <p>매장 설명서는 단순한 소개 페이지가 아닙니다.</p>
+              <p>
+                사장님의 머릿속에만 있던
+                <br />
+                가게의 장점, 메뉴의 이유, 가격 기준, 고객 응대 방식,
+                <br />
+                자주 받는 질문, 리뷰에서 나온 반응을 정리한
+                <br />
+                우리 매장의 마케팅 원본입니다.
+              </p>
+            </div>
+
+            <div className="manual-items" aria-label="매장 설명서에 들어가는 항목">
+              {manualItems.map((item) => (
+                <div className="manual-item" key={item}>
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="manual-keyline">
+              <p>
+                한 번 정리한 설명서는
+                <br />
+                검색 노출, SNS 콘텐츠, 공지, 리뷰 답변, 상담 문구로 계속 활용됩니다.
               </p>
             </div>
           </div>

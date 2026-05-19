@@ -96,27 +96,10 @@ blockquote {
   padding: 88px 0 0;
 }
 
-.hero-canvas,
 .hero-openai-frame {
   margin: 0 auto;
   max-width: var(--container-wide);
   width: 100%;
-}
-
-.hero-canvas {
-  padding: 0 24px;
-}
-
-.hero-version-label {
-  color: var(--color-muted);
-  font-size: 13px;
-  line-height: 1.45;
-  margin-bottom: 26px;
-}
-
-.hero-current-copy {
-  margin: 0 auto;
-  max-width: var(--container-narrow);
 }
 
 .hero-openai {
@@ -127,18 +110,14 @@ blockquote {
   display: grid;
   gap: 24px;
   grid-template-columns: minmax(0, 684px) minmax(0, 664px);
-  min-height: 734px;
+  min-height: 688px;
   padding: 0 24px 24px;
 }
 
 .hero-openai-copy {
   align-self: end;
   max-width: 650px;
-  padding-bottom: 2px;
-}
-
-.hero-openai-copy .hero-version-label {
-  margin-bottom: 172px;
+  padding-bottom: 0;
 }
 
 .openai-eyebrow {
@@ -172,230 +151,52 @@ blockquote {
   width: 100%;
 }
 
-.problem-section {
+.problem-quote-card-section {
   background: var(--color-band);
   margin-top: 72px;
 }
 
-.problem-layout {
-  align-items: start;
-  display: grid;
-  gap: 84px;
-  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
+.problem-quote-card-layout,
+.philosophy-layout,
+.manual-layout {
+  padding-top: 0;
 }
 
-.problem-copy h2 {
-  font-size: 42px;
+.problem-quote-card-copy,
+.philosophy-copy,
+.manual-copy {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.problem-quote-card-copy h2,
+.container.philosophy-layout > h2,
+.container.manual-layout > h2 {
+  font-size: 32px;
   font-weight: 520;
-  line-height: 1.14;
-  max-width: 720px;
+  line-height: 1.2;
+  margin: 0 auto;
+  max-width: 1080px;
+  text-align: center;
   word-break: keep-all;
 }
 
-.problem-body {
+.problem-quote-card-body,
+.philosophy-copy,
+.manual-copy {
   display: grid;
   gap: 22px;
-  margin-top: 42px;
-  max-width: 640px;
-}
-
-.problem-body p {
-  font-size: 18px;
-  line-height: 1.72;
-  word-break: keep-all;
-}
-
-.problem-list {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.problem-item {
-  background: var(--color-page);
-  border: 1px solid var(--color-line);
-  border-radius: var(--radius-small);
-  display: grid;
-  gap: 26px;
-  min-height: 148px;
-  padding: 22px;
-}
-
-.problem-item span {
-  color: var(--color-subtle);
-  font-size: 12px;
-  font-weight: 650;
-  line-height: 1;
-}
-
-.problem-item p {
-  font-size: 18px;
-  font-weight: 520;
-  line-height: 1.42;
-  word-break: keep-all;
-}
-
-.problem-alt-section {
-  background: var(--color-page);
-}
-
-.problem-alt-intro {
-  border-top: 1px solid var(--color-line-strong);
-  display: grid;
-  gap: 84px;
-  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
-  margin-bottom: 72px;
-  padding-top: 34px;
-}
-
-.problem-alt-heading h2 {
-  font-size: 42px;
-  font-weight: 520;
-  line-height: 1.14;
-  max-width: 760px;
-  word-break: keep-all;
-}
-
-.problem-alt-copy {
-  display: grid;
-  gap: 22px;
-  max-width: 620px;
-  padding-top: 39px;
-}
-
-.problem-alt-copy p {
-  font-size: 17px;
-  line-height: 1.72;
-  word-break: keep-all;
-}
-
-.problem-alt-rows {
-  border-top: 1px solid var(--color-line-strong);
-}
-
-.problem-alt-row {
-  align-items: center;
-  border-bottom: 1px solid var(--color-line);
-  display: grid;
-  gap: 28px;
-  grid-template-columns: 96px minmax(0, 1fr);
-  min-height: 92px;
-  padding: 22px 0;
-}
-
-.problem-alt-row span {
-  color: var(--color-subtle);
-  font-size: 12px;
-  font-weight: 650;
-}
-
-.problem-alt-row p {
-  font-size: 26px;
-  font-weight: 520;
-  line-height: 1.24;
-  word-break: keep-all;
-}
-
-.problem-quote-section {
-  background: var(--color-page);
-  color: var(--color-ink);
-}
-
-.problem-quote-layout {
-  border-top: 1px solid var(--color-line-strong);
-  display: grid;
-  gap: 84px;
-  grid-template-columns: 360px minmax(0, 1fr);
-  padding-top: 34px;
-}
-
-.problem-quote-heading {
-  max-width: 360px;
-}
-
-.problem-quote-heading .eyebrow {
-  color: var(--color-muted);
-}
-
-.problem-quote-heading h2 {
-  font-size: 34px;
-  font-weight: 520;
-  line-height: 1.16;
-  margin-bottom: 20px;
-  word-break: keep-all;
-}
-
-.problem-quote-heading > p:last-child {
-  color: var(--color-muted);
-  font-size: 15px;
-  line-height: 1.72;
-  word-break: keep-all;
-}
-
-.problem-quote-list {
-  border-top: 1px solid var(--color-line-strong);
-}
-
-.problem-quote {
-  border-bottom: 1px solid var(--color-line);
-  display: grid;
-  gap: 24px;
-  grid-template-columns: minmax(0, 1fr) 42px;
-  margin: 0;
-  padding: 24px 0;
-}
-
-.problem-quote blockquote {
-  font-size: 24px;
-  font-weight: 520;
-  line-height: 1.32;
-  max-width: 780px;
-  word-break: keep-all;
-}
-
-.problem-quote blockquote::before {
-  content: "“";
-}
-
-.problem-quote blockquote::after {
-  content: "”";
-}
-
-.problem-quote figcaption {
-  color: var(--color-subtle);
-  font-size: 12px;
-  font-weight: 650;
-  padding-top: 7px;
-  text-align: right;
-}
-
-.problem-quote-card-section {
-  background: var(--color-band);
-}
-
-.problem-quote-card-layout {
-  align-items: start;
-  display: grid;
-  gap: 84px;
-  grid-template-columns: minmax(0, 640px) minmax(0, 1fr);
-}
-
-.problem-quote-card-copy h2 {
-  font-size: 36px;
-  font-weight: 520;
-  line-height: 1.16;
-  margin-bottom: 24px;
-  max-width: 620px;
-  word-break: keep-all;
+  margin: 42px auto 0;
+  text-align: center;
 }
 
 .problem-quote-card-body {
-  display: grid;
-  gap: 22px;
-  max-width: 640px;
+  max-width: 680px;
 }
 
-.problem-quote-card-body p {
+.problem-quote-card-body p,
+.philosophy-copy > p,
+.manual-copy p {
   font-size: 18px;
   line-height: 1.72;
   word-break: keep-all;
@@ -404,7 +205,9 @@ blockquote {
 .problem-quote-card-grid {
   display: grid;
   gap: 14px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 68px auto 0;
+  max-width: 1080px;
 }
 
 .problem-quote-card {
@@ -414,7 +217,7 @@ blockquote {
   border-radius: var(--radius-small);
   display: flex;
   margin: 0;
-  min-height: 148px;
+  min-height: 164px;
   padding: 24px;
 }
 
@@ -437,48 +240,71 @@ blockquote {
   background: var(--color-page);
 }
 
-.philosophy-layout {
-  border-top: 1px solid var(--color-line-strong);
-  padding-top: 34px;
-}
-
-.philosophy-layout > .eyebrow {
-  text-align: center;
-}
-
-.container.philosophy-layout > h2 {
-  font-size: 42px;
-  font-weight: 520;
-  line-height: 1.14;
-  margin: 0 auto;
-  max-width: 760px;
-  text-align: center;
-  word-break: keep-all;
-}
-
 .philosophy-copy {
-  display: grid;
-  gap: 22px;
-  margin: 42px auto 0;
   max-width: 650px;
-  text-align: center;
-}
-
-.philosophy-copy > p {
-  font-size: 18px;
-  line-height: 1.72;
-  word-break: keep-all;
 }
 
 .philosophy-keyline {
   border-top: 1px solid var(--color-line-strong);
-  margin: 42px auto 0;
+  margin: 68px auto 0;
   max-width: 760px;
   padding-top: 28px;
   text-align: center;
 }
 
 .philosophy-keyline p {
+  font-size: 26px;
+  font-weight: 520;
+  line-height: 1.28;
+  word-break: keep-all;
+}
+
+.manual-section {
+  background: var(--color-page);
+}
+
+.manual-copy {
+  max-width: 700px;
+}
+
+.manual-items {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 68px auto 0;
+  max-width: 920px;
+}
+
+.manual-item {
+  align-items: center;
+  background: var(--color-page);
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 44px;
+  padding: 12px 18px;
+}
+
+.manual-item p {
+  font-size: 16px;
+  font-weight: 520;
+  line-height: 1.35;
+  text-align: center;
+  word-break: keep-all;
+}
+
+.manual-keyline {
+  border-top: 1px solid var(--color-line-strong);
+  margin: 58px auto 0;
+  max-width: 860px;
+  padding-top: 28px;
+  text-align: center;
+}
+
+.manual-keyline p {
   font-size: 26px;
   font-weight: 520;
   line-height: 1.28;
@@ -509,7 +335,7 @@ blockquote {
 
 .eyebrow {
   color: var(--color-muted);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45;
   margin-bottom: 18px;
 }
@@ -521,13 +347,6 @@ h1 {
   margin-bottom: 44px;
 }
 
-.article-copy {
-  display: grid;
-  gap: 22px;
-  max-width: 600px;
-}
-
-.article-copy p,
 .narrow-center > p,
 .callout p {
   font-size: 16px;
@@ -997,10 +816,6 @@ blockquote {
     padding-bottom: 0;
   }
 
-  .hero-openai-copy .hero-version-label {
-    margin-bottom: 28px;
-  }
-
   .hero-openai-image {
     height: auto;
     max-height: 520px;
@@ -1029,37 +844,22 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
-  .problem-layout {
-    gap: 42px;
-    grid-template-columns: 1fr;
-  }
-
-  .problem-alt-intro {
-    gap: 34px;
-    grid-template-columns: 1fr;
-  }
-
-  .problem-alt-copy {
-    max-width: 680px;
-    padding-top: 0;
-  }
-
-  .problem-quote-layout {
-    gap: 48px;
-    grid-template-columns: 1fr;
-  }
-
-  .problem-quote-heading {
-    position: static;
-  }
-
-  .problem-quote-card-layout {
-    gap: 42px;
-    grid-template-columns: 1fr;
-  }
-
   .philosophy-copy {
     max-width: 680px;
+  }
+
+  .manual-copy {
+    max-width: 680px;
+  }
+
+  .problem-quote-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .problem-quote-card-grid,
+  .philosophy-keyline,
+  .manual-items {
+    margin-top: 54px;
   }
 
   .product-visual {
@@ -1095,7 +895,6 @@ blockquote {
     padding-top: 84px;
   }
 
-  .hero-canvas,
   .hero-openai-frame {
     padding-left: 18px;
     padding-right: 18px;
@@ -1105,84 +904,49 @@ blockquote {
     font-size: 40px;
   }
 
-  .problem-copy h2 {
-    font-size: 32px;
+  .problem-quote-card-copy h2,
+  .container.philosophy-layout > h2,
+  .container.manual-layout > h2 {
+    font-size: 28px;
   }
 
-  .problem-alt-heading h2 {
-    font-size: 32px;
-  }
-
-  .problem-quote-heading h2 {
-    font-size: 32px;
-  }
-
-  .problem-quote-card-copy h2 {
-    font-size: 32px;
-  }
-
-  .container.philosophy-layout > h2 {
-    font-size: 32px;
-  }
-
-  .problem-body p,
-  .problem-item p,
-  .problem-alt-copy p,
-  .problem-quote-heading > p:last-child,
   .problem-quote-card-body p,
   .problem-quote-card blockquote,
-  .philosophy-copy > p {
+  .philosophy-copy > p,
+  .manual-copy p {
     font-size: 16px;
   }
 
-  .philosophy-keyline p {
+  .philosophy-keyline p,
+  .manual-keyline p {
     font-size: 22px;
   }
 
-  .problem-alt-row {
-    gap: 18px;
-    grid-template-columns: 44px minmax(0, 1fr);
-    min-height: 78px;
-    padding: 18px 0;
+  .problem-quote-card-grid,
+  .manual-items {
+    margin-top: 46px;
   }
 
-  .problem-alt-row p {
-    font-size: 18px;
+  .philosophy-keyline {
+    margin-top: 46px;
   }
 
-  .problem-quote {
-    gap: 18px;
-    grid-template-columns: 1fr;
-    padding: 24px 0;
+  .manual-item {
+    border-radius: var(--radius-medium);
+    min-height: 46px;
+    padding: 13px 16px;
+    width: 100%;
   }
 
-  .problem-quote blockquote {
-    font-size: 20px;
-  }
-
-  .problem-quote figcaption {
-    padding-top: 0;
-    text-align: left;
-  }
-
-  .problem-list {
-    grid-template-columns: 1fr;
-  }
-
-  .problem-quote-card-grid {
-    grid-template-columns: 1fr;
+  .manual-item p {
+    font-size: 16px;
   }
 
   .problem-quote-card {
     min-height: 118px;
   }
 
-  .problem-item {
-    min-height: 118px;
-  }
-
-  .openai-description br,
-  .article-copy br {
+  .openai-description br {
     display: none;
   }
 
